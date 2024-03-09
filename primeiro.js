@@ -229,45 +229,146 @@ const prompt = require("prompt-sync")();
 
 // console.log('O novo Array é:', frutas);
 
-const  numeros = [];
+// const  numeros = [];
 
-for (let i = 0; i < 5; i++) {
-    const Array = parseInt(prompt(`Insira a ${i + 1}º numero: `));
-    numeros.push(Array);
-}
+// for (let i = 0; i < 5; i++) {
+//     const Array = parseInt(prompt(`Insira a ${i + 1}º numero: `));
+//     numeros.push(Array);
+// }
 
-console.log('o Array é:', numeros)
+// console.log('o Array é:', numeros)
 
-for(let i = 0; i < numeros.length; i++) {
-    console.log(`o numero é: ${numeros[i]}`)
-}
+// for(let i = 0; i < numeros.length; i++) {
+//     console.log(`o numero é: ${numeros[i]}`)
+// }
 
-function calcular(acumulador, numero) {
-    return acumulador + numero;
-}
+// function calcular(acumulador, numero) {
+//     return acumulador + numero;
+// }
 
-const soma = numeros.reduce(calcular, 0);
+// const soma = numeros.reduce(calcular, 0);
 
-console.log("A soma do Array é:", soma);
+// console.log("A soma do Array é:", soma);
 
-const numerosOrdenados = [...numeros]
+// const numerosOrdenados = [...numeros]
 
-numerosOrdenados.sort((a, b) => a - b);
+// numerosOrdenados.sort((a, b) => a - b);
 
-console.log("Números em ordem crescente:", numerosOrdenados);
+// console.log("Números em ordem crescente:", numerosOrdenados);
 
-function numerospares(numero) {
-    return numero % 2 === 0;
-}
+// function numerospares(numero) {
+//     return numero % 2 === 0;
+// }
 
-const pares = numeros.filter(numerospares);
+// const pares = numeros.filter(numerospares);
 
-console.log('os numeros pares são:', pares)
+// console.log('os numeros pares são:', pares)
 
-function Quadrado(numero) {
-    return numero * numero;
-}
+// function Quadrado(numero) {
+//     return numero * numero;
+// }
 
-const quadrados = numeros.map(Quadrado);
+// const quadrados = numeros.map(Quadrado);
 
-console.log("Quadrados dos números:", quadrados);
+// console.log("Quadrados dos números:", quadrados);
+
+
+
+//SEMANA 6
+
+
+
+
+
+// const numero = prompt('Entre com seu numero: ')
+
+// function verificacao(numero) {
+//     return new Promise((resolve, reject) => {
+//       if (numero % 2 === 0) {
+//         resolve("Número par");
+//       } else {
+//         reject(new Error("Error: número ímpar"));
+//       }
+//     });
+//   }
+  
+//   verificacao(numero)
+//     .then(mensagem => {
+//       console.log(mensagem);
+//     })
+//     .catch(error => {
+//       console.error(error.message);
+//     });
+  
+// function getUserInfo() {
+//     return new Promise((resolve) => {
+//       setTimeout(() => {
+//         const userInfo = {
+//           nome: prompt('Entre com seu nome: '),
+//           idade: prompt('Entre com sua idade: '),
+//           email: prompt('Entre com seu email: '),
+//         };
+//         resolve(userInfo);
+//       });
+//     });
+//   }
+  
+//   async function mostrarUserInfo() {
+//     try {
+//       const userInfo = await getUserInfo();
+      
+//       await new Promise(resolve => setTimeout(resolve, 2000));
+      
+//       console.log("Nome:", userInfo.nome);
+//       console.log("Idade:", userInfo.idade);
+//       console.log("Email:", userInfo.email);
+//     } catch (error) {
+//       console.error("erro, não consegui pegar os dados:", error);
+//     }
+//   }
+  
+//   mostrarUserInfo();
+
+
+
+  // SEMANA 7
+
+  
+  let produto =  class produto {
+    constructor(nome, preco, quantidade) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+    
+    vender(quantidadeVendida) {
+        if (quantidadeVendida > this.quantidade) {
+          console.log(`Estoque insuficiente para ${this.nome}. Quantidade disponível: ${this.quantidade}.`);
+        }
+         else {
+          this.quantidade -= quantidadeVendida;
+          console.log(`Venda realizada com sucesso! Quantidade restante: ${this.quantidade}.`);
+        }
+      }
+      repor(adicionar) { this.quantidade += adicionar 
+            console.log(`Foi reposto ${adicionar} do produto ${this.nome} agora o estoque é de ${this.quantidade}.`)
+        }
+        
+        mostreestoque(nome) {
+            console.log(`O produto ${this.nome} possui ${this.quantidade} unidades dispiniveis.`)
+        }
+        
+        atualizarpreco(novopreco){
+          this.preco = novopreco
+          console.log(`O produto ${this.nome} agora custa ${novopreco}`)
+        }
+    }
+
+    const produto1 = new produto('banana', '10', '5')
+    produto1.vender(2)
+    produto1.vender(4)
+    produto1.vender(3)
+    produto1.repor(5)
+    produto1.mostreestoque()
+    produto1.atualizarpreco(10)
+    

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 3</title>
+</head>
+<body>
+  <div id="usuario"> </div>
+
+  <script>
+    async function fetchdados() {
+      try {
+        const response = await fetch('dados.json');
+
+        if (!response.ok) {
+          throw new Error('Erro não pegou dados');
+        }
+
+        const jsondados = await response.json();
+
+        document.getElementById('usuario').innerText = JSON.stringify(jsondados, null, 2);
+      } catch (error) {
+        console.error('Erro:', error);
+      }
+    }
+
+    fetchdados();
+  </script>
+</body>
+</html>
