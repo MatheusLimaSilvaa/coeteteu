@@ -11,21 +11,21 @@
   <script>
     async function fetchdados() {
       try {
-        const response = await fetch('dados.json');
+        const response = await fetch('data.json');
 
         if (!response.ok) {
           throw new Error('Erro não pegou dados');
         }
 
-        const jsondados = await response.json();
+        const jsondata = await response.json();
 
-        document.getElementById('usuario').innerText = JSON.stringify(jsondados, null, 2);
+        document.getElementById('usuario').innerText = JSON.stringify(jsondata, null, 2);
       } catch (error) {
         console.error('Erro:', error);
       }
     }
 
-    fetchdados();
+    fetchdata();
   </script>
 </body>
 </html>
