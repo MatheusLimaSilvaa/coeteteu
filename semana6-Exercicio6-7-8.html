@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Exercício 6 e 7
+let cep = prompt("Digite seu CEP:");
+
+fetch(`https://viacep.com.br/ws/${cep}/json`, { method: "GET" })
+  .then((retornoFetch) => {
+    return retornoFetch.json();
+  })
+  .then((retornoApi) => {
+    alert(`${retornoApi.logradouro}, ${retornoApi.complemento} - 
+  ${retornoApi.bairro} - ${retornoApi.localidade}/${retornoApi.uf}`);
+
+    let resposta = prompt("Os dados estão corretos?");
+
+    if (resposta.toLowerCase() == "sim") {
+      localStorage.setItem("endereco", JSON.stringify(retornoApi));
+    }
+  });
+
+//Exercício 08
+let endereco = localStorage.getItem("endereco");
+
+if (endereco == null) {
+  pegarEndereco();
+} else {
+  let atualiza = prompt(
+    "Endereço já informado na base de dados, deseja atualizar? S ou 1/N ou 2"
+  );
+  if (atualiza == "S", "1", "sim", "Sim") {
+    pegarEndereco();
+  } else {
+    alert("Execução finalizada.");
+  }
+}
+
+function pegarEndereco() {
+  let cep = prompt("Digite seu CEP:");
+
+  fetch(`https://viacep.com.br/ws/${cep}/json`, { method: "GET" })
+    .then((retornoFetch) => {
+      return retornoFetch.json();
+    })
+    .then((retornoApi) => {
+
+      alert(`${retornoApi.logradouro}, ${retornoApi.complemento} - 
+    ${retornoApi.bairro} - ${retornoApi.localidade}/${retornoApi.uf}`);
+
+      let resposta = prompt("Os dados estão corretos?");
+
+      if (resposta.toLowerCase() == "sim") {
+        localStorage.setItem("endereco", JSON.stringify(retornoApi));
+      }
+    });
+}
+    </script>
+</body>
+</html>

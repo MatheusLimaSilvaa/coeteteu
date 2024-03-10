@@ -58,14 +58,10 @@ const prompt = require("prompt-sync")();
 
     // Exercicio 4 no HTML.
 
-    // Exercicio 5
+    // Exercicio 5 no HTML.
 
+    // Exercicio 6 no HTML.
 
-    // Exercicio 6
+    // Exercicio 7 no HTML.
 
-
-    // Exercicio 7
-
-
-    // Exercicio 8
-
+    // Exercicio 8 no HTML.
