@@ -41,32 +41,32 @@ const prompt = require("prompt-sync")();
 //     produto1.atualizarpreco(10)
 
 
-// Exercicio 7
+// Exercicio 7 e 8
 
-class pessoa {
-    nome;
-    idade;
-    profissao;
+// class pessoa {
+//     nome;
+//     idade;
+//     profissao;
 
-    constructor(nome, idade, profissao){
-        this.nome = nome
-        this.idade = idade
-        this.profissao = profissao
-    }
-}
+//     constructor(nome, idade, profissao){
+//         this.nome = nome
+//         this.idade = idade
+//         this.profissao = profissao
+//     }
+// }
 
-class cliente extends pessoa {
-    telefone;
-    email;
-    clienteDesde;
+// class cliente extends pessoa {
+//     telefone;
+//     email;
+//     clienteDesde;
 
-    constructor(nome, idade, profissao, telefone, email, clienteDesde){
-        super(nome, idade, profissao)
-        this.telefone = telefone
-        this.email = email
-        this.clienteDesde = clienteDesde
-    }
-}
+//     constructor(nome, idade, profissao, telefone, email, clienteDesde){
+//         super(nome, idade, profissao)
+//         this.telefone = telefone
+//         this.email = email
+//         this.clienteDesde = clienteDesde
+//     }
+// }
 
-const cliente1 = new cliente("Matheus", 28, "programador", "36015388984", "silva-lima_matheus@hotmail.com", "1995-08-18")
-console.log(cliente1)
+// const cliente1 = new cliente("Matheus", 28, "programador", "36015388984", "silva-lima_matheus@hotmail.com", "1995-08-18")
+// console.log(cliente1)
