@@ -56,31 +56,7 @@ const prompt = require("prompt-sync")();
 
     // Exercicio 3 no HTML/JSON.
 
-
-    // Exercicio 4
-
-    function salvarUsuario() {
-        // Pede as informações do usuário
-        const nome = prompt("Digite seu nome:");
-        const idade = parseInt(prompt("Digite sua idade:"));
-        const email = prompt("Digite seu email:");
-      
-        // Cria um objeto com as informações
-        const usuario = {
-          nome: nome,
-          idade: idade,
-          email: email,
-        };
-      
-        // Salva o objeto no localStorage
-        localStorage.setItem("user", JSON.stringify(usuario));
-      
-        // Mensagem de sucesso
-        alert("Usuário salvo com sucesso!");
-      }
-      
-      // Executa a função
-      salvarUsuario();
+    // Exercicio 4 no HTML.
 
     // Exercicio 5
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 5</title>
+</head>
+<body>
+  <h1>RECEBA MIAU ;-;</h1>
+  <script>
+    async function buscarImagens() {
+      const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=10');
+      const data = await response.json();
+
+      data.forEach((imagem) => {
+        document.write(`<img src="${imagem.url}" width="400" /><br />`);
+      });
+    }
+
+    buscarImagens();
+  </script>
+</body>
+</html>
