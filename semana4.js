@@ -86,3 +86,47 @@ const prompt = require("prompt-sync")();
 
 // Exercicio 7
 
+// const readline = require('readline');
+
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// let products = {
+//   'hortifruti': 0,
+//   'laticinios': 0,
+//   'carnes': 0,
+//   'peixes': 0,
+//   'aves': 0
+// };
+
+// function askProduct() {
+//   rl.question('Qual produto você deseja comprar? escreva o nome : (1)hortifruti - (2)laticinios - (3)carnes - (4)peixes - (5)aves - (6)fechar pedido\n', (answer) => {
+//     if (answer === '6'){
+//       let maxProduct = Object.keys(products).reduce((a, b) => products[a] > products[b] ? a : b);
+//       console.log(`O produto em maior quantidade é: ${maxProduct}`);
+//       rl.close();
+//     } else if (answer in products) {
+//       askQuantity(answer);
+//     } else {
+//       console.log('Opção inválida. Por favor, selecione uma opção válida.');
+//       askProduct();
+//     }
+//   });
+// }
+
+// function askQuantity(product) {
+//   rl.question(`Quantos itens de ${product} você deseja comprar?\n`, (answer) => {
+//     let quantity = parseInt(answer);
+//     if (!isNaN(quantity) && quantity >= 0) {
+//       products[product] += quantity;
+//       askProduct();
+//     } else {
+//       console.log('Quantidade inválida. Por favor, insira um número válido.');
+//       askQuantity(product);
+//     }
+//   });
+// }
+
+// askProduct();
